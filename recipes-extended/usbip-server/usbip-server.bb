@@ -19,9 +19,12 @@ do_install() {
     install -d ${D}/${systemd_system_unitdir}/
     install -m 0644 ${WORKDIR}/usbip-share@.service ${D}/${systemd_system_unitdir}/
     install -m 0644 ${WORKDIR}/usbipd.service ${D}/${systemd_system_unitdir}/
+    install -d ${D}/data/usbipd.d/
+    touch ${D}/data/usbipd.d/config
 }
 
 FILES:${PN} += " \
     ${sysconfdir}/udev/rules.d/* \
     ${systemd_system_unitdir}/* \
+    /data/usbipd.d/config \
 "

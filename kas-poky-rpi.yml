@@ -17,6 +17,10 @@ repos:
       meta:
       meta-poky:
       meta-yocto-bsp:
+    patches:
+      meta-raspberry:
+        repo: meta-raspberry
+        path: patches/0001-wic-Do-not-remove-wic-partitions.patch
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
@@ -31,6 +35,11 @@ repos:
   meta-qt5:
     url: https://github.com/meta-qt5/meta-qt5/
     path: layers/meta-qt5
+    refspec: master
+
+  meta-swupdate:
+    url: https://github.com/sbabic/meta-swupdate
+    path: layers/meta-swupdate
     refspec: master
 
 bblayers_conf_header:
